@@ -33,4 +33,22 @@ public class Board {
         }
         return squares.get(index);
     }
+
+
+    /**
+     * returns a square based on the previous location
+     * 
+     * @param oldLocation
+     * @param offset
+     * @return
+     */
+    public Square getSquare(Square oldLocation,int offset){
+        int i= squares.indexOf(oldLocation);
+        if(i==-1){
+            throw new IllegalArgumentException("oldLocation does not exist");
+        }else {
+            return getSquare((i+offset)%40);
+        }
+    }
+
 }
