@@ -34,6 +34,7 @@ public class Board {
         return squares.get(index);
     }
 
+
     /**
      * returns a square based on the previous location
      * 
@@ -49,4 +50,5 @@ public class Board {
             return getSquare((i+offset)%40);
         }
     }
+
 }
