@@ -51,11 +51,8 @@ public class Player {
         System.out.println("Player " + name +
                 " rolled die 1 for " + dice.get(0).getFaceValue()
                 + " and die 2 for " + dice.get(1).getFaceValue());
-        board.getSquare(
-                piece.getLocation(),
-                dice.get(0).getFaceValue() +
-                        dice.get(1).getFaceValue());
+        piece.setLocation(board.getSquare(piece.getLocation(), dice.get(0).getFaceValue() + dice.get(1).getFaceValue()));
         System.out.println("Player " + name +
-                " landed on square " + piece.getLocation());
+                " landed on square " + piece.getLocation().getName());
     }
 }
