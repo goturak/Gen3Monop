@@ -76,4 +76,8 @@ public class Player {
 
         piece.getLocation().landedOn(this);
     }
+
+    public int getNetWorth() {
+        return  cash;
+    }
 }
