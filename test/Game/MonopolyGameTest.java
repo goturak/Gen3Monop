@@ -13,6 +13,7 @@ public class MonopolyGameTest {
     public void cantCreateAGameWithAnInvalidAmountOfPlayers(){
         assertThrows(IllegalArgumentException.class, ()-> new MonopolyGame(9));
         assertThrows(IllegalArgumentException.class, ()-> new MonopolyGame(1));
+
         
     }
 
