@@ -10,5 +10,9 @@ public class PlayerTest {
         assertEquals("John", p1.getName());
         assertNotEquals("john", p1.getName());
     }
+    @Test
+    public void testTakeTurn() {
+
+    }
 
 }
