@@ -2,6 +2,7 @@ package Player;
 
 import Game.*;
 
+import javax.xml.transform.sax.SAXSource;
 import java.util.ArrayList;
 
 /**
@@ -14,6 +15,10 @@ public class Player {
     private Board board;
     private ArrayList<Die> dice;
 
+    /**
+     * Name Player constructor
+     * @param name Player name
+     */
     public Player(String name) {
         this.name = name;
     }
@@ -37,14 +42,20 @@ public class Player {
     }
 
     /**
-     *
+     * Sequence of actions of a player taking his turn
      */
     public void takeTurn() {
-        Die d1 = new Die();
-        Die d2 = new Die();
-        Board b = new Board();
+        dice.get(0).roll();
+        dice.get(1).roll();
 
-        d1.roll();
-        d2.roll();
+        System.out.println("Player " + name +
+                " rolled die 1 for " + dice.get(0).getFaceValue()
+                + " and die 2 for " + dice.get(1).getFaceValue());
+        board.getSquare(
+                piece.getLocation(),
+                dice.get(0).getFaceValue() +
+                        dice.get(1).getFaceValue());
+        System.out.println("Player " + name +
+                " landed on square " + piece.getLocation());
     }
 }
