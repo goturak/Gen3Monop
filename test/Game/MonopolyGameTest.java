@@ -7,4 +7,13 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class MonopolyGameTest {
 
+    @Test
+    public void cantCreateAGameWithAnInvalidAmountOfPlayers(){
+        assertThrows(IllegalArgumentException.class, ()-> new MonopolyGame(9));
+        assertThrows(IllegalArgumentException.class, ()-> new MonopolyGame(1));
+
+        
+    }
+
+
 }
