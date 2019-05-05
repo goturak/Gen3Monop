@@ -2,6 +2,9 @@ package Game;
 
 import Player.Player;
 
+/**
+ * represents a basic square with empty landedOn()
+ */
 public class RegularSquare extends Square{
     /**
      * Constructs a Square with a name
