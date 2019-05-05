@@ -24,6 +24,9 @@ public class PlayerTest {
 
         Player farouche = new Player("Farouche", "koala", b, dice);
 
+        farouche.takeTurn();
+        farouche.takeTurn();
+
     }
 
 }
